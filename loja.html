@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético Barreiraense | Loja Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="toast-notification" class="toast">Ação realizada com sucesso!</div>
+
+    <header class="navbar-universe">
+        <div class="nav-container">
+            <div class="logo-area"><span class="shield-icon">🟢⚪</span><span class="club-name">ATLÉTICO BARREIRAENSE</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="noticias.html">Notícias</a>
+                <a href="elenco.html">Elenco</a>
+                <a href="historia.html">História</a>
+                <a href="loja.html" class="active">Loja</a>
+            </nav>
+            <div class="nav-actions">
+                <!-- BOTÃO DE ABRIR O CARRINHO NO TOPO -->
+                <button class="barrosao-nav-btn" onclick="toggleCartSidebar()">🛒 Carrinho (<span id="cart-count">0</span>)</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-container" style="margin-top: 100px;">
+        <div class="section-header">
+            <h2>🛍️ LOJA OFICIAL BARREIRAENSE</h2>
+            <p>Garanta os mantos sagrados em verde e branco com tecnologia mística</p>
+        </div>
+        
+        <!-- LAYOUT DE DUAS COLUNAS: PRODUTOS E DESTAQUE -->
+        <div class="store-layout-grid">
+            <div class="store-grid">
+                <div class="product-card">
+                    <div class="product-img">🟢⚪</div>
+                    <h3>Camisa Oficial Atlético 2026</h3>
+                    <p class="price">R$ 199,90</p>
+                    <div class="product-options" style="margin-bottom:12px;">
+                        <label style="font-size:0.8rem; color:#8a9ba8;">Tamanho: </label>
+                        <select id="size-camisa" style="background:#141c17; color:#fff; border:1px solid #087A45; padding:4px 8px; border-radius:4px;"><option value="P">P</option><option value="M" selected>M</option><option value="G">G</option><option value="GG">GG</option></select>
+                    </div>
+                    <button class="btn btn-primary" onclick="addCamisaToCart()">ADICIONAR AO CARRINHO</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">👑</div>
+                    <h3>Boné Temático do Clube</h3>
+                    <p class="price">R$ 79,90</p>
+                    <p style="font-size:0.8rem; color:#8a9ba8; margin-bottom:15px;">Modelo Único • Símbolo Oficial</p>
+                    <button class="btn btn-primary" onclick="addToCart('Boné do Clube', 79.90)">ADICIONAR AO CARRINHO</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SIDEBAR DO CARRINHO (DESLIZA DA DIREITA) -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h3>🛒 Seu Carrinho</h3>
+            <span class="close-cart-btn" onclick="toggleCartSidebar()">&times;</span>
+        </div>
+        <div class="cart-sidebar-body">
+            <ul id="cart-items">
+                <li style="color: #7b8b95; text-align: center; margin-top: 20px;">Seu carrinho está vazio.</li>
+            </ul>
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cart-total-price" style="color: var(--dourado);">R$ 0,00</span>
+            </div>
+            <button class="btn btn-gold" style="width:100%; margin-top:12px;" onclick="checkout()">FINALIZAR COMPRA</button>
+            <button class="btn btn-secondary" style="width:100%; margin-top:8px; font-size:0.8rem;" onclick="clearCart()">Esvaziar Carrinho</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">🟢⚪ ATLÉTICO BARREIRAENSE</div>
+            <div class="social-links">
+                <a href="https://youtube.com" target="_blank" class="social-btn youtube">YouTube</a>
+                <a href="https://instagram.com/atleticobarreiraenseoficial" target="_blank" class="social-btn instagram">Instagram</a>
+                <a href="https://threads.net/@atleticobarreiraenseoficial" target="_blank" class="social-btn threads">Threads</a>
+                <a href="https://tiktok.com" target="_blank" class="social-btn tiktok">TikTok</a>
+            </div>
+            <p class="copyright">© 1976 - 2026 Atlético Barreiraense.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

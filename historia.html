@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético Barreiraense | História Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar-universe">
+        <div class="nav-container">
+            <div class="logo-area"><span class="shield-icon">🟢⚪</span><span class="club-name">ATLÉTICO BARREIRAENSE</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="noticias.html">Notícias</a>
+                <a href="elenco.html">Elenco</a>
+                <a href="historia.html" class="active">História</a>
+                <a href="loja.html">Loja</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-container" style="margin-top: 100px;">
+        <div class="section-header">
+            <h2>📜 A HISTÓRIA & LINHA DO TEMPO</h2>
+            <p>De um time de futebol fundado em 1976 a uma saga cósmica interdimensional</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item" onclick="openModal('1976: A Fundação', '', 'Fundação oficial em 23 de novembro de 1976. O clube nasceu da necessidade imediata de estruturar uma força organizada para enfrentar a hegemonia tirânica do CRIAS FC nos arredores de Barreira.')">
+                <span class="t-year">1976</span>
+                <h4>A Fundação</h4>
+                <p>O nascimento do clube e a consolidação inicial da instituição.</p>
+            </div>
+            <div class="timeline-item" onclick="openModal('1980: A Guerra do Estádio', '', 'O conflito supremo de um mês inteiro contra o CRIAS FC. A batalha encerrou-se em outubro com a vitória heróica do Atlético e o consequente desmanche total da facção rival.')">
+                <span class="t-year">1980</span>
+                <h4>A Guerra do Estádio</h4>
+                <p>O conflito definitivo que moldou as fronteiras de Barreira.</p>
+            </div>
+            <div class="timeline-item" onclick="openModal('2011: A Chegada de Piróka', '', 'Piróka é integrado oficialmente ao plantel do Atlético Barreiraense em 2011, inaugurando uma era dourada de glórias, dribles surreais e uma idolatria que cruzou gerações.')">
+                <span class="t-year">2011</span>
+                <h4>A Chegada de Piróka</h4>
+                <p>O despertar da maior lenda dos gramados em 2011.</p>
+            </div>
+            <div class="timeline-item" onclick="openModal('2024-2026: Era Dimensional', '', 'Período marcado por ressurreições místicas via Trado, o surgimento da perigosa Ampulheta Temporal e os eventos catastróficos orquestrados por Cascaes nas Temporadas 4 e 5.')">
+                <span class="t-year">2024+</span>
+                <h4>Era Dimensional & Temporal</h4>
+                <p>Viagens no tempo, realidades alternativas e o retorno de Cascaes.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">🟢⚪ ATLÉTICO BARREIRAENSE</div>
+            <div class="social-links">
+                <a href="https://youtube.com" target="_blank" class="social-btn youtube">YouTube</a>
+                <a href="https://instagram.com/atleticobarreiraenseoficial" target="_blank" class="social-btn instagram">Instagram</a>
+                <a href="https://threads.net/@atleticobarreiraenseoficial" target="_blank" class="social-btn threads">Threads</a>
+                <a href="https://tiktok.com" target="_blank" class="social-btn tiktok">TikTok</a>
+            </div>
+            <p class="copyright">© 1976 - 2026 Atlético Barreiraense.</p>
+        </div>
+    </footer>
+
+    <div id="general-modal" class="modal">
+        <div class="modal-content" style="border-color: var(--dourado);">
+            <span class="close-btn" onclick="closeModal('general-modal')">&times;</span>
+            <h2 id="gen-modal-title" style="color: var(--dourado); font-family:'Oswald';">Marco</h2>
+            <p id="gen-modal-desc" class="bio-text">Detalhes...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
