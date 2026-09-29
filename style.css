@@ -1,0 +1,485 @@
+:root {
+    --verde-atletico: #087A45;
+    --verde-escuro: #043D27;
+    --branco: #F5F7F4;
+    --dourado: #D4AF37;
+    --preto: #080B09;
+    --cinza-card: #121814;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar-universe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 11, 9, 0.95);
+    border-bottom: 2px solid var(--verde-atletico);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--dourado);
+}
+
+.barrosao-nav-btn {
+    background: transparent;
+    border: 2px solid var(--dourado);
+    color: var(--dourado);
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.barrosao-nav-btn:hover {
+    background: var(--dourado);
+    color: var(--preto);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(4, 61, 39, 0.6), rgba(8, 11, 9, 0.9)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.founded-tag {
+    color: var(--dourado);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn:active { transform: scale(0.95); }
+
+.btn-primary {
+    background-color: var(--verde-atletico);
+    color: var(--branco);
+    border: none;
+}
+
+.btn-primary:hover { background-color: #0aa35c; }
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--branco);
+    color: var(--branco);
+}
+
+.btn-secondary:hover { background-color: var(--branco); color: var(--preto); }
+
+.btn-gold {
+    background-color: var(--dourado);
+    color: var(--preto);
+    border: none;
+    font-weight: 900;
+}
+
+.btn-gold:hover { background-color: #f3c643; }
+
+/* PAINEL AO VIVO */
+.live-match-banner {
+    position: absolute;
+    bottom: 30px;
+    background: rgba(18, 24, 20, 0.9);
+    border: 1px solid var(--verde-atletico);
+    padding: 15px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.live-status {
+    font-size: 0.75rem;
+    color: #ff4444;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ff4444;
+    border-radius: 50%;
+    animation: pulse 1.5px infinite;
+}
+
+.match-scoreboard {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.score { color: var(--dourado); font-size: 1.8rem; }
+.match-subtitle { font-size: 0.8rem; color: #888; margin-top: 4px; }
+
+/* SEÇÕES GERAIS */
+.section-container {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-darker { background-color: var(--cinza-card); width: 100%; max-width: 100%; }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    color: var(--branco);
+    margin-bottom: 10px;
+}
+
+.section-header p { color: #888; font-size: 0.95rem; }
+
+/* NOTÍCIAS */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: var(--cinza-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.news-card:hover { transform: translateY(-5px); border-color: var(--verde-atletico); }
+
+.news-img {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-news-1 { background-image: url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=600&q=80'); }
+.bg-news-2 { background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80'); }
+.bg-news-3 { background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80'); }
+
+.news-info { padding: 20px; }
+.news-info .category { color: var(--verde-atletico); font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+.news-info h3 { font-size: 1.1rem; margin: 10px 0; line-height: 1.4; }
+.news-info .date { font-size: 0.8rem; color: #777; }
+
+/* ELENCO */
+.elenco-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.player-card {
+    background: var(--preto);
+    border: 1px solid rgba(8, 122, 69, 0.3);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.player-card:hover {
+    border-color: var(--dourado);
+    transform: scale(1.03);
+}
+
+.player-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.barrosao-bg { background: radial-gradient(circle, #D4AF37 0%, #043D27 100%); }
+.piroka-bg { background: radial-gradient(circle, #087A45 0%, #043D27 100%); }
+.beludao-bg { background: radial-gradient(circle, #3498db 0%, #043D27 100%); }
+.paula-bg { background: radial-gradient(circle, #e84393 0%, #043D27 100%); }
+
+.player-card h3 { font-size: 1.2rem; margin-bottom: 5px; }
+.player-card .role { font-size: 0.8rem; color: var(--dourado); }
+
+/* HISTÓRIA / TIMELINE */
+.timeline {
+    border-left: 2px solid var(--verde-atletico);
+    padding-left: 30px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--dourado);
+    border: 2px solid var(--preto);
+}
+
+.t-year {
+    font-family: 'Oswald', sans-serif;
+    color: var(--dourado);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.timeline-item h4 { font-size: 1.1rem; margin: 5px 0; }
+.timeline-item p { color: #aaa; font-size: 0.9rem; }
+
+/* CASA BARROSA */
+.casa-barrosa-section {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(4,61,39,0.7)), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sub-badge { color: var(--dourado); font-family: 'Oswald'; letter-spacing: 2px; }
+.casa-content h2 { font-family: 'Oswald'; font-size: 3rem; margin: 10px 0; }
+.casa-content p { color: #ddd; font-size: 1.1rem; margin-bottom: 25px; font-style: italic; }
+
+/* LOJA */
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: var(--preto);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-img {
+    height: 140px;
+    background: #1a231e;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.product-card h3 { font-size: 1rem; margin-bottom: 10px; }
+.product-card .price { color: var(--dourado); font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; }
+
+/* CARRINHO FLUTUANTE */
+.cart-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0f1411;
+    border: 2px solid var(--verde-atletico);
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    z-index: 999;
+}
+
+.cart-box h4 { font-family: 'Oswald'; font-size: 1.1rem; margin-bottom: 10px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+#cart-items { list-style: none; max-height: 120px; overflow-y: auto; margin-bottom: 10px; }
+#cart-items li { font-size: 0.85rem; margin-bottom: 5px; display: flex; justify-content: space-between; color: #ccc; }
+.cart-total { display: flex; justify-content: space-between; font-weight: bold; font-size: 1rem; border-top: 1px solid #222; padding-top: 8px; }
+
+/* MODAIS (WIKIPÉDIA E ÁREA SECRETA) */
+.modal, .secret-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--cinza-card);
+    border: 2px solid var(--verde-atletico);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%; max-width: 500px;
+    position: relative;
+}
+
+.secret-content {
+    background: #000;
+    border: 2px solid var(--dourado);
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%; max-width: 600px;
+    position: relative;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+}
+.close-btn:hover { color: #fff; }
+
+.badge-role {
+    display: inline-block;
+    background: var(--verde-atletico);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin: 10px 0;
+}
+
+.bio-text { margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.5; }
+
+/* ÁREA SECRETA DO BARROSÃO */
+.secret-title { font-family: 'Oswald'; color: var(--dourado); font-size: 1.8rem; margin-bottom: 5px; }
+.secret-sub { color: #777; font-size: 0.8rem; margin-bottom: 20px; letter-spacing: 2px; }
+.secret-files-list { display: flex; flex-direction: column; gap: 10px; }
+.s-file {
+    background: #111;
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+.s-file:hover { border-color: var(--dourado); color: var(--dourado); padding-left: 15px; }
+
+/* RODAPÉ */
+footer {
+    background: #040504;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #111;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
