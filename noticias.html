@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético Barreiraense | Central de Notícias</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar-universe">
+        <div class="nav-container">
+            <div class="logo-area"><span class="shield-icon">🟢⚪</span><span class="club-name">ATLÉTICO BARREIRAENSE</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="noticias.html" class="active">Notícias</a>
+                <a href="elenco.html">Elenco</a>
+                <a href="historia.html">História</a>
+                <a href="loja.html">Loja</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="barrosao-nav-btn" onclick="window.location.href='barrosao.html'">⚡ BARROSÃO</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-container" style="margin-top: 100px;">
+        <div class="section-header">
+            <h2>📰 CENTRAL DE NOTÍCIAS</h2>
+            <p>Acompanhe todos os comunicados oficiais e os bastidores do clube</p>
+        </div>
+        <div class="news-grid">
+            <article class="news-card" onclick="openModal('Novo Reforço Tático', 'A diretoria confirmou novas peças fundamentais para a disputa das próximas fases temporais contra anomalias dimensionais.')">
+                <div class="news-img bg-news-1"></div>
+                <div class="news-info">
+                    <span class="category">Elenco</span>
+                    <h3>Atlético Barreiraense anuncia novo reforço tático para a temporada temporal.</h3>
+                    <p class="date">28 de Março, 2026 • por Diretoria</p>
+                </div>
+            </article>
+            <article class="news-card" onclick="openModal('15 Anos de Piróka', 'Em cerimônia na Casa Barrosa, a lenda Piróka foi celebrada por sua trajetória estelar iniciada em 2011.')">
+                <div class="news-img bg-news-2"></div>
+                <div class="news-info">
+                    <span class="category">Lendas</span>
+                    <h3>Piróka completa marca histórica de serviços ininterruptos ao clube.</h3>
+                    <p class="date">21 de Junho, 2026 • por Barrosão</p>
+                </div>
+            </article>
+            <article class="news-card" onclick="openModal('Reformas na Casa Barrosa', 'Barrosão iniciou reformas para blindar o centro de treinamento contra instabilidades temporais.')">
+                <div class="news-img bg-news-3"></div>
+                <div class="news-info">
+                    <span class="category">Infraestrutura</span>
+                    <h3>Barrosão prepara novidades e portais dimensionais para a Casa Barrosa.</h3>
+                    <p class="date">15 de Março, 2026 • por Setor Místico</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer><p>© 1976 - 2026 Atlético Barreiraense.</p></footer>
+
+    <div id="general-modal" class="modal">
+        <div class="modal-content" style="border-color: var(--dourado);">
+            <span class="close-btn" onclick="closeModal('general-modal')">&times;</span>
+            <h2 id="gen-modal-title" style="color: var(--dourado); font-family:'Oswald';">Notícia</h2>
+            <p id="gen-modal-desc" class="bio-text">Conteúdo...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

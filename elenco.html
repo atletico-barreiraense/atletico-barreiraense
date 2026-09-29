@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético Barreiraense | Elenco Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar-universe">
+        <div class="nav-container">
+            <div class="logo-area"><span class="shield-icon">🟢⚪</span><span class="club-name">ATLÉTICO BARREIRAENSE</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="noticias.html">Notícias</a>
+                <a href="elenco.html" class="active">Elenco</a>
+                <a href="historia.html">História</a>
+                <a href="loja.html">Loja</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="barrosao-nav-btn" onclick="window.location.href='barrosao.html'">⚡ BARROSÃO</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-container" style="margin-top: 100px;">
+        <div class="section-header">
+            <h2>⚽ ELENCO PRINCIPAL & ENTIDADES</h2>
+            <p>Conheça as mentes e lendas por trás do escudo verde e branco</p>
+        </div>
+        <div class="elenco-grid">
+            <div class="player-card" onclick="openModal('Barrosão', 'Fundador e Entidade Suprema (Ingresso: 1976)\n\nSer onipotente responsável por criar o clube e moldar a realidade pós-guerra contra o CRIAS.')">
+                <div class="player-avatar barrosao-bg">👑</div><h3>Barrosão</h3><p class="role">Fundador</p>
+            </div>
+            <div class="player-card" onclick="openModal('Piróka', 'Lenda do Clube (Ingresso: 2011)\n\nO maior ícone dos gramados barreiraenses. Pai de Novo P1RÓK4 e avô de Piró Jr.')">
+                <div class="player-avatar piroka-bg">🟢</div><h3>Piróka</h3><p class="role">Atacante • Lenda</p>
+            </div>
+            <div class="player-card" onclick="openModal('Beludão', 'Jogador Místico (Ingresso: 2015)\n\nReconhecido pelo cabelo azul e barba rosa, protagonista de rivalidades intensas.')">
+                <div class="player-avatar beludao-bg">🔵</div><h3>Beludão</h3><p class="role">Jogador</p>
+            </div>
+            <div class="player-card" onclick="openModal('Paula Vadinho', 'Guardiã Espiritual (Ingresso: 2021)\n\nAssume a proteção sagrada da Casa Barrosa.')">
+                <div class="player-avatar paula-bg">🩷</div><h3>Paula Vadinho</h3><p class="role">Guardiã</p>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>© 1976 - 2026 Atlético Barreiraense.</p></footer>
+
+    <div id="general-modal" class="modal">
+        <div class="modal-content" style="border-color: var(--dourado);">
+            <span class="close-btn" onclick="closeModal('general-modal')">&times;</span>
+            <h2 id="gen-modal-title" style="color: var(--dourado); font-family:'Oswald';">Perfil</h2>
+            <p id="gen-modal-desc" class="bio-text">Detalhes...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

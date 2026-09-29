@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético Barreiraense | História Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar-universe">
+        <div class="nav-container">
+            <div class="logo-area"><span class="shield-icon">🟢⚪</span><span class="club-name">ATLÉTICO BARREIRAENSE</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="noticias.html">Notícias</a>
+                <a href="elenco.html">Elenco</a>
+                <a href="historia.html" class="active">História</a>
+                <a href="loja.html">Loja</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="barrosao-nav-btn" onclick="window.location.href='barrosao.html'">⚡ BARROSÃO</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-container" style="margin-top: 100px;">
+        <div class="section-header">
+            <h2>📜 A HISTÓRIA & LINHA DO TEMPO</h2>
+            <p>De um time de futebol fundado em 1976 a uma saga cósmica</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item" onclick="openModal('1976: A Fundação', 'Fundação oficial por Barrosão em 23 de novembro de 1976 para estruturar a resistência contra o CRIAS FC.')">
+                <span class="t-year">1976</span>
+                <h4>A Fundação</h4>
+                <p>O nascimento do clube e a manifestação inicial de Barrosão.</p>
+            </div>
+            <div class="timeline-item" onclick="openModal('1980: A Guerra do Estádio', 'O conflito supremo de um mês inteiro contra o CRIAS FC que culminou na vitória histórica do Atlético.')">
+                <span class="t-year">1980</span>
+                <h4>A Guerra do Estádio</h4>
+                <p>O conflito definitivo que moldou as fronteiras de Barreira.</p>
+            </div>
+            <div class="timeline-item" onclick="openModal('2011: A Chegada de Piróka', 'Piróka é integrado ao plantel oficial do clube, inaugurando seu legado estelar.')">
+                <span class="t-year">2011</span>
+                <h4>A Chegada de Piróka</h4>
+                <p>O despertar da maior lenda dos gramados.</p>
+            </div>
+            <div class="timeline-item" onclick="openModal('2024-2026: Era Dimensional', 'Ressurreições via Trado, a Ampulheta Temporal e os perigos trazidos por Cascaes nas Temporadas 4 e 5.')">
+                <span class="t-year">2024+</span>
+                <h4>Era Dimensional & Temporal</h4>
+                <p>Viagens no tempo e realidades alternativas.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>© 1976 - 2026 Atlético Barreiraense.</p></footer>
+
+    <div id="general-modal" class="modal">
+        <div class="modal-content" style="border-color: var(--dourado);">
+            <span class="close-btn" onclick="closeModal('general-modal')">&times;</span>
+            <h2 id="gen-modal-title" style="color: var(--dourado); font-family:'Oswald';">Marco</h2>
+            <p id="gen-modal-desc" class="bio-text">Detalhes...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

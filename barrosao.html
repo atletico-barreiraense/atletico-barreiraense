@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético Barreiraense | Área do Barrosão</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #000;">
+
+    <header class="navbar-universe">
+        <div class="nav-container">
+            <div class="logo-area"><span class="shield-icon">🟢⚪</span><span class="club-name">ATLÉTICO BARREIRAENSE</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="noticias.html">Notícias</a>
+                <a href="elenco.html">Elenco</a>
+                <a href="historia.html">História</a>
+                <a href="loja.html">Loja</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="barrosao-nav-btn" onclick="window.location.href='index.html'">SAIR</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-container" style="margin-top: 120px; text-align: center;">
+        <h1 class="secret-title" style="font-size: 2.5rem;">⚡ ARQUIVOS RESTRITOS DE BARROSÃO</h1>
+        <p class="secret-sub">Nível de Acesso: Ômega / Divino</p>
+        
+        <div class="secret-files-list" style="max-width: 600px; margin: 0 auto; text-align: left;">
+            <div class="s-file" onclick="openModal('Arquivo 001: A Origem', 'Antes de haver tempo, havia apenas o verde, o branco e a vontade inabalável de vencer. Barrosão manifestou o clube do absoluto vazio.')">📁 ARQUIVO 001: A Origem Primordial</div>
+            <div class="s-file" onclick="openModal('Arquivo 004: O Dossiê Piróka', 'A anomalia integrada em 2011 que desafiou a morte em 21 de junho de 2024 e retornou mais forte através de linhagens temporais.')">📁 ARQUIVO 004: O Dossiê Piróka</div>
+            <div class="s-file" onclick="openModal('Arquivo 007: A Ampulheta', 'Objeto místico sob custódia capaz de reescrever 30 dias do destino de Barreira.')">⏳ ARQUIVO 007: A Ampulheta Temporal</div>
+        </div>
+    </main>
+
+    <div id="general-modal" class="modal">
+        <div class="modal-content" style="border-color: var(--dourado);">
+            <span class="close-btn" onclick="closeModal('general-modal')">&times;</span>
+            <h2 id="gen-modal-title" style="color: var(--dourado); font-family:'Oswald';">Registro</h2>
+            <p id="gen-modal-desc" class="bio-text">Conteúdo...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
